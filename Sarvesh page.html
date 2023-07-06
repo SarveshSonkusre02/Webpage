@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Webpage</title>
+  <style>
+    /* Reset default styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Global styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    /* Navbar styles */
+    .navbar {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 1263px;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #d9ff00;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-brand {
+      font-size: 34px;
+      font-family:fantasy;
+      font-weight: 200;
+      color: #101010;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .navbar-brand:hover {
+      color: #0000007d;
+    }
+
+    .navbar-menu {
+      list-style: none;
+      display: flex;
+    }
+
+    .navbar-menu li {
+      margin-left: 10px;
+    }
+
+    .navbar-menu li a {
+      font-size: 20px;
+      color: #101010;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .navbar-menu li a:hover {
+      color: #ff00009c;
+    }
+
+    /* Hero section styles */
+    .hero {
+      position: absolute;
+      top: 70px;
+      left: 10px;
+      width: 500px;
+      height: 300px;
+      background-color: #000000;
+      color: #fff;
+      padding-top: 10px;
+      padding-left: 20px;
+      text-align: left;
+      margin-top: 15px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    .hero2 {
+      position: absolute;
+      top: 650px;
+      left: 650px;
+      width: 500px;
+      height: 300px;
+      background-color: rgb(0, 0, 0);
+      color: #fff;
+      padding-top: 10px;
+      padding-left: 20px;
+      text-align: left;
+      margin-top: 15px;
+    }
+
+    .hero2 h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero2 p {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    /* Call to action styles */
+    .cta {
+      position: absolute;
+      top: 1825px;
+      left: 0px;
+      width: 1263px;
+      height: 512px;
+      background-color: #000000;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .cta h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    .cta .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #bbff00;
+      color: #020202;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .cta .btn:hover {
+      background-color: #00eaff;
+    }
+
+    /* Footer styles */
+    .footer {
+      position: absolute;
+      top: 2325px;
+      left: 0px;
+      width: 1263px;
+      height: 70px;
+      color: #000;
+      background-color: #d9ff00;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 18px;
+    }
+    .obj1 {
+      position: absolute;
+      top: 70px;
+      left: 650px;
+      width: 500px;
+      height: 300px;
+    }
+    .obj2 {
+      margin-top: 15px;
+      position: absolute;
+      top: 700px;
+      left: 50px;
+      width: 500px;
+      height: 300px;
+    }
+
+    .obj3 {
+      margin-top: 15px;
+      position: absolute;
+      top: 1200px;
+      left: 650px;
+      width: 500px;
+      height: 300px;
+    }
+
+    .links{
+      font-size: 20px;
+      position: absolute;
+      top: 1300px;
+      left: 50px;
+      width: 500px;
+      height: 300px;
+      background-color: rgb(0, 0, 0);
+      color: #fff;
+      padding-top: 10px;
+      padding-left: 20px;
+      text-align: left;
+      margin-top: 15px;
+    }
+
+    .buttonyt{
+      margin-top: 10px;
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #fd1010;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .buttonIn {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: linear-gradient(to left, #f9a825, #dc60c1, #d400ff, #393be8);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    }
+    .buttonlk{
+      margin-top: 10px;
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #0a66c2;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .buttongm{
+      margin-top: 0px;
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      background: linear-gradient(to right, #fff, #8f3131);
+      color: #000000;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .buttonwp{
+      margin-top: 0px;
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      background: linear-gradient(to right, #00a884, #00a884);
+      color: #f6ebeb;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+
+<body>
+  <header class="navbar">
+    <a href="#" class="navbar-brand">Sarvesh Sonkusre</a>
+    <nav>
+      <ul class="navbar-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to myWebpage</h1>
+    <p>I am Sarvesh Sonkusre.</br> This is just a small demonstration of my frondend skills.</br>Take a look at this website to know more about me</p>
+    <p>I made this webpage to showcase how AI can help in development process of projects on various different feilds</p>
+    <p>In current worlds scenario it is important to keep up with new technologies and try to follow the path of AI. Instead of opposing AI completely it is necessary to use AI for Betterment</p>
+  </section>
+
+  <section class="hero2">
+    <h1>I am a B.Tech CSE(AIML)</br> Student</h1>
+    <p>Currently I am in 7th Semester.</br> I am persuing my degree from</br>Shri Shankracharya Technical Institution </p>
+  </section>
+
+  <section class="hero2">
+    <h1>I have a wide range of skill sets</h1>
+    <!--<p>My skill set include Frontend technology</br>HTML, CSS, JS, React, Figma, Webflow</p>-->
+    <p>I possess proficiency in coding languages such as C, C++, Python,</br> along with a strong understanding of DBMS, Figma, HTMl, CSS, JS.</br> My expertise encompasses DSA, AIML, data structure and modeling,</br> and artificial neural networks.</br>I have successfully completed diverse projects</br>in the fields of web development, AI, ML, and IoT.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Sarvesh Sonkusre</h2>
+    <h3>Address</h3>
+    <p>House no.-193, Street no.-03,</br> Deepak Nagar, Durg(C.G) (491001)</p>
+    <p>Email ID</p>
+    <a href="https://mail.google.com/?" class="buttongm">sonkusresarvesh@gmail.com</a>
+    <p>&phone; Contact me via whatsapp</p>
+    <a href="https://web.whatsapp.com/" class="buttonwp">7869776874</a> 
+    <!--<a href="#" class="btn">Get Started</a>-->
+  </section>
+  
+  <section>
+    <div class="obj1">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.377/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/87HXonarfZLPWDHR/scene.splinecode"width="500" height="100"></spline-viewer>
+    </div>
+  </section>
+
+  <section>
+     <div class="obj2">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.377/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/QEiFigdjZACqpNmO/scene.splinecode"width="500" height="100"></spline-viewer>
+    </div>
+  </section>
+
+  <section>
+    <div class="obj3">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.377/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/hSLODTOcH6ugHDmr/scene.splinecode"width="500" height="100"></spline-viewer>
+    </div>
+  </section>
+
+  <section>
+    <div class="links">
+        <p>Here are links to some on my online profile. I have been working for quite sometime to make my online portfolio stronger</p>
+        <p>Take a look at my work. I have been puting contineous work in feild of Prompt Engineering, AI, Data structure and Algorithms, Webpage development, UI/UX Development, 3D Designing and more feilds</p>
+        <a class="buttonyt" href="https://www.youtube.com/channel/UCeNMeH4XVilUjaRU7kv0q5w">Youtube Channel</a>
+        <a class="buttonIn" href="https://www.instagram.com/sarvesh_0203/">Instagram</a>
+        <a class="buttonlk" href="https://www.linkedin.com/in/sarvesh-sonkusre/">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2023 Sarvesh Sonkusre. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
